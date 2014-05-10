@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Impact Game</title>
+	<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+	<style type="text/css">
+	body {
+		padding-top: 60px; /* When using the navbar-top-fixed */
+	}
+	#canvas {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+	}
+	#youtubeLink {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		border: 1px solid #555;
+		display: none;
+	}
+	</style>
+
+	<link rel="stylesheet" type="text/css" href="shadowbox/shadowbox.css">
+	<script type="text/javascript" src="shadowbox/shadowbox.js"></script>
+	
+	<script type="text/javascript" src="game.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.7.1.min.js"><\/script>')</script>
+
+	<script type="text/javascript">
+$(function(){
+	$(".level").each(function() {
+
+   		var id = $(this).attr('id');
+   		$('#' + id).click(function(){
+   			ig.game.myDirector.jumpTo(ig.global['Level' + id]);
+   		});
+
+	});
+});
+	</script>
+
+
+</head>
+<body>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+	Shadowbox.init({
+		players:  ['swf', 'img', 'html'],
+		troubleElements:["select", "object", "embed"]
+
+	});
+	</script>
+
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="brand" href="#">Linetime</a>
+				<ul class="nav">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							Quarter 1
+							<b class="caret"></b>
+						</a>
+						<ul class="dropdown-menu">
+							<li id="Week1" class="level"><a href="#">Week 1 - Black Death and Peasant Revolts</a></li>
+							<li id="Week2" class="level"><a href="#">Week 2 - 100 Years War</a></li>
+							<li id="Week3" class="level"><a href="#">Week 3 - Humanism and Papacy</a></li>
+							<li id="Week4" class="level"><a href="#">Week 4 - The Renaissance</a></li>
+							<li id="Week5" class="level"><a href="#">Week 5 - Renaissance Artists</a></li>
+							<li id="Week6" class="level"><a href="#">Week 6 - The Spark of the Reformation</a></li>
+							<li id="Week7" class="level"><a href="#">Week 7 - Works of the Reformation</a></li>
+
+
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							Quarter 2
+							<b class="caret"></b>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Stay tuned</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							Quarter 3
+							<b class="caret"></b>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="#" >Stay tuned</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							Quarter 4
+							<b class="caret"></b>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="#" >Stay tuned</a></li>
+						</ul>
+					</li>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+<div class="container">
+
+	<canvas id="canvas"></canvas>
+</div>
+
+
+</body>
+</html>

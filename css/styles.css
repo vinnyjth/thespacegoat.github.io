@@ -1,0 +1,17 @@
+body{
+  background-color: #87ffc3;
+}
+
+.container{
+  text-align: center;
+  margin-left : auto;
+  margin-right: auto;
+  padding: 60px;
+  background-color: #e2e2e2;
+  border-radius: 15px;
+}
+/*.container::before{
+  padding: 80px;
+  background-color: #DDD;
+  content: "";
+}*/
